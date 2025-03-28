@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alinhamento de texto</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content{
+            flex: 1;
+            padding: 30px 20px;
+        }
+
+        .left-text{
+            text-align: left;
+        }
+        .right-text{
+            text-align: right;
+        }
+        .top-text{
+            background-color: aqua;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>Exemplos de Posicionamento de Texto</h1>
+
+        <!-- Alinhamento à esquerda -->
+        <div class="left-text">
+            Este texto está alinhado à esquerda.
+        </div>
+
+        <!-- Alinhamento à direita -->
+        <div class="right-text">
+            Este texto está alinhado à direita.
+        </div>
+
+        <!-- Texto ilustrativo no "topo" (posição relativa ao fluxo) -->
+        <div class="top-text">
+            Este texto está no topo da seção.
+        </div>
+
+        <!-- Textos lado a lado (flexível e responsivo) -->
+        <div class="side-by-side">
+            <div class="text-box">
+                Texto 1 lado a lado.
+            </div>
+            <div class="text-box">
+                Texto 2 lado a lado.
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé fixado no fim da página -->
+    <div class="bottom-text">
+        Este texto está no rodapé da página.
+    </div>
+
+</body>
+
+</html>
