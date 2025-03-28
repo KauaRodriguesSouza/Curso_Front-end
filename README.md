@@ -1,4 +1,4 @@
-<h1>Bem-vindo ao meu GitHub! 🚀</h1>
+<h1>Bem-vindo ao meu Aprendizado! 🚀</h1>
 Aqui, vou compartilhar tudo o que estou aprendendo sobre desenvolvimento web. Meu foco inicial está em dominar HTML, CSS e JavaScript, que são as tecnologias fundamentais para criar sites e aplicações web incríveis.
 
 <P>O que você vai encontrar por aqui:</P>
