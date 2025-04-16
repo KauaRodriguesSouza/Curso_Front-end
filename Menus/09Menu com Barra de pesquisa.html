@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Superior Horizontal Responsivo</title>
+    <style>
+        /* Fundo gradiente da página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradiente diagonal */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-container{
+            width: 100%;
+            max-width: auto;
+            background-color: #78706a;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img{
+            height: 60px;
+            margin-right: 20px;
+            padding: 10px;
+        }
+
+        .search-bar{
+            flex-grow: 1;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        .search-bar input{
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: aliceblue;
+            padding: 8px 12px ;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover{
+            background-color: rgb(47, 87, 146);
+        }
+
+        @media (max-width: 768px) {
+            .menu-container{
+                flex-direction: column;
+                align-items: center;
+                gap:10px;
+                padding: 15px;
+            }
+
+            .search-bar{
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .nav-links{
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <!-- Menu horizontal -->
+    <div class="menu-container">
+        <!-- Logo e título da página -->
+        <div class="logo">
+            <img src="../multimidias/neymar.webp" alt="Logo"> <!-- Substitua por seu próprio logo -->
+        </div>
+       
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+       
+        <!-- Links de navegação -->
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contatos">Contatos</a>
+        </div>
+    </div>
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide automático</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle; width: 100%; height: auto;} /* Torna a imagem responsiva */
+
+        /* Recipiente de apresentação de slides */
+        .slideshow-container {
+            max-width: 600px; /* Aumenta o tamanho máximo do slideshow */
+            position: relative;
+            margin: auto;
+        }
+
+        /* Os pontos/balas/indicadores */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+
+<h2>Apresentação de slides automática</h2>
+<p>Altere a imagem a cada 2 segundos</p>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="img/neymar-medalha.webp" alt="Café da Tarde">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="img/neymar-psg.jpg" alt="Iogurte">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="img/cr7-careta.jpg" alt="Relaxar">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="img/cr7.jpg" alt="Vibe">
+    </div>
+</div>
+
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+</div>
+
+<script>
+
+    //inicializa o indice do slide como 0
+    let slideIndex = 0; // Inicializa o índice do slide como 0
+    showSlides(); // Chama a função showSlides para exibir o primeiro slide
+ 
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides"); // Obtém todos os elementos com a classe "mySlides"
+        let dots = document.getElementsByClassName("dot"); // Obtém todos os elementos com a classe "dot"
+       
+        // Oculta todos os slides
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+       
+        slideIndex++; // Incrementa o índice do slide
+        if (slideIndex >= slides.length) { slideIndex = 0; } // Se o índice for maior ou igual ao número de slides, reinicia para 0
+       
+        // Remove a classe "active" de todos os pontos
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+       
+        // Exibe o slide atual e marca o ponto correspondente como ativo
+        slides[slideIndex].style.display = "block";  
+        dots[slideIndex].className += " active"; // Adiciona a classe "active" ao ponto correspondente
+       
+        // Chama a função showSlides novamente após 2 segundos para mudar o slide
+        setTimeout(showSlides, 2000); // Muda a imagem a cada 2 segundos
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+Formulario 02 <!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+        /* Aplica o box-sizing para todos os elementos, incluindo padding e border dentro do tamanho total */
+        * {
+            box-sizing: border-box;
+        }
+ 
+        /* Estiliza o corpo da página */
+        body {
+            font-family: Arial, sans-serif;/* Define a fonte padrão */
+            background-color: #e9ecef;/* Cor de fundo cinza claro */
+            margin: 0;/* Remove margens externas padrão */
+            padding: 20px;/* Espaço interno ao redor do conteúdo */
+        }
+ 
+        /* Estiliza um contêiner principal */
+        .container {
+            border-radius: 5px; /* Cantos arredondados */
+            background-color: #f2f2f2;/* Cor de fundo clara */
+            padding: 20px;/* Espaço interno */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);/* Sombra suave para efeito de profundidade */
+        }
+ 
+        /* Estiliza campos de texto, selects e textarea */
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;/* Ocupa 100% da largura do contêiner */
+            padding: 12px;/* Espaço interno */
+            border: 1px solid #ccc;/* Borda cinza clara */
+            border-radius: 4px;/* Cantos levemente arredondados */
+            resize: vertical; /* Permite redimensionar apenas na vertical */
+        }
+ 
+        /* Estiliza as labels (rótulos dos campos) */
+        label {
+            padding: 12px 12px 12px 0; /* Espaçamento interno nas laterais */
+            display: inline-block; /* Permite aplicar largura e altura */
+        }
+ 
+        /* Estiliza o botão de envio */
+        input[type="submit"] {
+            background-color: #a1cabb;/* Cor de fundo verde suave */
+            color: white;/* Cor do texto branca */
+            padding: 12px 20px;/* Espaço interno */
+            border: none;/* Remove a borda padrão */
+            border-radius: 4px;/* Cantos arredondados */
+            cursor: pointer;/* Cursor muda para "mãozinha" ao passar o mouse */
+            float: right;/* Alinha o botão à direita */
+            transition: background-color 0.3s; /* Suaviza a mudança de cor ao passar o mouse */
+        }
+ 
+        /* Efeito ao passar o mouse sobre o botão */
+        input[type="submit"]:hover {
+            background-color: #345461;/* Cor de fundo mais escura ao passar o mouse */
+        }
+ 
+        /* Define uma coluna com 25% da largura */
+        .col-25 {
+            float: left;/* Alinha à esquerda */
+            width: 25%;/* Largura de 25% */
+            margin-top: 6px;/* Espaço acima do elemento */
+        }
+ 
+        /* Define uma coluna com 75% da largura */
+        .col-75 {
+            float: left;/* Alinha à esquerda */
+            width: 75%;/* Largura de 75% */
+            margin-top: 6px; /* Espaço acima do elemento */
+        }
+ 
+        /* Clearfix para limpar os floats dentro de uma linha */
+        .row::after {
+            content: ""; /* Gera um conteúdo vazio */
+            display: table;/* Define como tabela (ajuda na limpeza do float) */
+            clear: both;/* Limpa floats à esquerda e à direita */
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <h2>Formulário de Contato</h2>
+ 
+    <div class="container">
+        <form action="/action_page.php" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Primeiro Nome</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Insira seu nome..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Sobrenome</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Insira seu sobrenome..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">País</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Selecione seu país...</option>
+                        <option value="australia">Austrália</option>
+                        <option value="canada">Canadá</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="brasil">Brasil</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Assunto</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Escreva algo..." style="height:200px"
+                        required></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+ 
+</body>
+ 
+</html>

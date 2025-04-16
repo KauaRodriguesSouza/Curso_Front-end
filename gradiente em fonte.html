@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente</title>
+    <style>
+        
+        .single-color{
+            color: blue;
+        }
+        .gradient{
+            background-image: linear-gradient(to bottom, purple, blue, turquoise);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="single-color">Eu tenho só uma cor.</p>
+    <p class="gradient">Eu sou colorido (Restart)</p>
+</body>
+
+</html>

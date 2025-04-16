@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
+  <title>Formulário de Contato</title> <!-- Título da aba do navegador -->
+  <style>
+    * {
+      box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+ 
+    body {
+      background: #787888; /* Cor de fundo escura */
+      color: #fff; /* Cor do texto branco */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Altura mínima da tela inteira */
+      padding: 2rem; /* Espaçamento interno */
+    }
+    .container{
+        background-color: rgb(57, 68, 117);
+        padding: 2rem;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 500px;
+ 
+    }
+    h2{
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;      
+    }
+    label{
+        display: block;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);    
+    }
+    input, textarea{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+    .Enviar{
+        margin-top: 10px;
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+        border: none;
+    }
+ 
+</style>
+</head>
+<body>
+  <div class="container"> <!-- Container principal do formulário -->
+    <h2>Entre em Contato</h2> <!-- Título do formulário -->
+    <form> <!-- Início do formulário -->
+      <label for="nome">Nome</label> <!-- Rótulo do campo nome -->
+      <input type="text" id="nome" name="nome" required> <!-- Campo de entrada para o nome -->
+ 
+      <label for="email">Email</label> <!-- Rótulo do campo email -->
+      <input type="email" id="email" name="email" required> <!-- Campo de entrada para o email -->
+ 
+      <label for="assunto">Assunto</label> <!-- Rótulo do campo assunto -->
+      <input type="text" id="assunto" name="assunto" required> <!-- Campo de entrada para o assunto -->
+ 
+      <label for="mensagem">Mensagem</label> <!-- Rótulo do campo mensagem -->
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea> <!-- Área de texto para mensagem -->
+ 
+      <button type="submit" class="Enviar">Enviar</button> <!-- Botão de envio do formulário -->
+    </form>
+  </div>
+</body>
+</html>
+ 

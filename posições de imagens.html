@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desaparecer em uma caixa</title>
+  <style>
+    :root {
+      --highlight-bg: rgba(134, 50, 190, 0.8);
+      --text-color: #fff;
+      --transition-speed: 0.5s;
+    }
+ 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+ 
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .container{
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px black;
+    }
+
+    .imagem{
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity var(--transition-speed);
+        backface-visibility: hidden;
+    }
+    
+    .middle{
+        position: absolute;
+        top: 40%;
+        left: 36%;
+        transform: translate(var(--transition-speed) ease);  
+        opacity: 0;
+        transition: opacity var(--transition-speed) ease;
+    }   
+
+    .text{
+        background-color: var(--highlight-bg);
+        color: var(--text-color);
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px black;
+    }
+
+    .container:hover .image{
+        opacity: 0.3;
+        filter: blur(1px);
+    }
+    .container:hover .middle{
+        opacity: 1;
+    }
+ 
+</style>
+</head>
+<body>
+ 
+  <h2>Desaparecer em uma caixa</h2>
+ 
+  <div class="container">
+    <img src="multimidias/neymar.webp" width="300px" alt="Mickey" class="image" />
+    <div class="middle">
+      <div class="text">Neymar</div>
+    </div>
+  </div>
+ 
+</body>
+</html>
+ 

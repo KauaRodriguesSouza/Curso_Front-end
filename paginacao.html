@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+        .pagination{
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active{
+            background-color: rgb(53, 2, 104);
+            color: aliceblue;
+            border-radius: 10px;   
+        }
+        .pagination a:hover:not(.active){
+            border-color: rgb(24, 110, 110);
+            border: 7px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Título da seção de paginação -->
+    <h2>Paginação com botões arredondados</h2>
+
+    <!-- Contêiner de paginação -->
+    <div class="pagination">
+        <!-- Link para página anterior -->
+        <a href="#">&laquo;</a>
+
+        <!-- Links de página numerados -->
+        <a href="#">1</a>
+        <a href="#" class="active">2</a> <!-- Página ativa destacada -->
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+
+        <!-- Link para a próxima página -->
+        <a href="#">&raquo;</a>
+    </div>
+
+</body>
+
+</html>

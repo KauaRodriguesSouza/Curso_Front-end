@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        body {
+            margin: 0; /* Remove margens padrão do corpo */
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+        }
+        ul {
+            position: fixed;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 25%;
+            background-color: #f1f1f1f1;
+            overflow: auto;
+        }
+ 
+        li a {
+            display: block;
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+ 
+        li a.active {
+            background-color: #a86e9f;
+            color: aliceblue;
+        }
+ 
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+</style>
+</head>
+<body>
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">Notícias</a></li>
+        <li><a href="#contact">Contatos</a></li>
+        <li><a href="#about">Sobre</a></li>
+    </ul>
+
+    <div class="content">
+        <h1>Bem-vindo!</h1>
+        <p>Este é o conteúdo principal da página. Você pode adicionar mais informações aqui.</p>
+        <p>Use o menu à esquerda para navegar pelas diferentes seções.</p>
+    </div>
+
+</body>
+</html>

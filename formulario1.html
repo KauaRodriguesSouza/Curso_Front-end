@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Estiliza campos de texto (input) e elementos select (caixa de seleção) */
+input[type=text], select {
+  width: 100%;                 /* Ocupa toda a largura do contêiner pai */
+  padding: 12px 20px;          /* Espaçamento interno: 12px vertical, 20px horizontal */
+  margin: 8px 0;               /* Margem vertical: 8px em cima e embaixo */
+  display: inline-block;       /* Permite definir largura/altura sem quebrar a linha */
+  border: 1px solid #ccc;      /* Borda cinza clara */
+  border-radius: 4px;          /* Cantos levemente arredondados */
+  box-sizing: border-box;      /* Inclui padding e borda na largura total do elemento */
+}
+ 
+/* Estiliza o botão de envio */
+input[type=submit] {
+  width: 100%;                 /* Ocupa toda a largura do contêiner pai */
+  background-color: #4f6b9e;   /* Cor de fundo azul escuro */
+  color: white;                /* Cor do texto branco */
+  padding: 14px 20px;          /* Espaçamento interno maior para um botão mais destacado */
+  margin: 8px 0;               /* Margem vertical entre elementos */
+  border: none;                /* Remove a borda padrão */
+  border-radius: 4px;          /* Cantos arredondados */
+  cursor: pointer;             /* Cursor muda para "mãozinha" ao passar o mouse */
+}
+ 
+/* Muda a cor de fundo do botão quando o mouse passa por cima */
+input[type=submit]:hover {
+  background-color: #6465bb;  /* Cor de fundo levemente diferente para indicar interação */
+}
+ 
+/* Estiliza divs como contêineres */
+div {
+  border-radius: 5px;          /* Cantos arredondados */
+  background-color: #f2f2f2;   /* Cor de fundo cinza claro */
+  padding: 20px;               /* Espaço interno ao redor do conteúdo */
+}
+ 
+</style>
+<body>
+ 
+<h3>Usando CSS para estilizar um formulário HTML</h3>
+ 
+<div>
+  <form action="">
+    <label for="fname">Primeiro Nome</label>
+    <input type="text" id="fname" name="firstname" placeholder="Insira seu nome.">
+ 
+    <label for="lname">Sobrenome</label>
+    <input type="text" id="lname" name="lastname" placeholder="Insira seu sobrenome..">
+ 
+    <label for="country">Pais</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">Brasil</option>
+    </select>
+ 
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+ 
+</body>
+</html>
